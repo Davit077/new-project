@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+body{
+    padding-top: 10vh;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    padding: 3% 0;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+    h1 a{
+        color: #3182B5;
+        text-decoration: none;
+    }
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul li{
+    display: inline;
+}
+ul {
+    color: #3182B5;
+    i{
+        margin-left: 3%;
+    }
+}
+.navbar ul li a{
+    color: #3182B5;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+.navbar ul li a:hover {
+    background-color: #3182B5;
+    color: white;
+    border-radius: 5px;
+}
+section{
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        height: 30pc;
+    .hero{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 10%;
+    }
+    .cont{
+        color: white;
+        text-align: right;
+    }
+    .cont h1{
+        font-size: 60px;
+        font-weight: bold;
+        padding-top: 25%;
+    }
+    .btn{
+        margin-top: 20px;
+        padding: 7px 15px;
+        background: #3182B5;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: background 0.3s;
+        margin-right: 50%;
+    }
+    .btn:hover{
+        background-color: #102B3C;
+    }
+}
+.headphones{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    .text-headphones{
+        width: 45%;
+    }
+    .text-headphones h1{
+        font-weight: 200;
+        text-align: center;
+    }
+    .text-headphones p{
+        text-align: center;
+        padding-top: 3%;
+    }
+    .shop-btn{
+        margin-top: 20px;
+        padding: 7px 15px;
+        background: #3182B5;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        transition: background 0.3s;
+        margin-left: 40%;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    .shop-btn:hover{
+        background-color: #102B3C;
+    }
+    .img-headphones{
+        width: 50%;
+    }
+    .img-headphones img{
+        width: 50%;
+        margin-top: 10%;
+    }
+}
