@@ -22,7 +22,7 @@ body {
   justify-content: space-evenly;
 }
 .navbar h1 a {
-  color: #3182B5;
+  color: #3182b5;
   text-decoration: none;
 }
 
@@ -37,21 +37,21 @@ body {
 }
 
 ul {
-  color: #3182B5;
+  color: #3182b5;
 }
 ul i {
   margin-left: 3%;
 }
 
 .navbar ul li a {
-  color: #3182B5;
+  color: #3182b5;
   text-decoration: none;
   font-size: 18px;
   padding: 10px 15px;
 }
 
 .navbar ul li a:hover {
-  background-color: #3182B5;
+  background-color: #3182b5;
   color: white;
   border-radius: 5px;
 }
@@ -81,7 +81,7 @@ section .cont h1 {
 section .btn {
   margin-top: 20px;
   padding: 7px 15px;
-  background: #3182B5;
+  background: #3182b5;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -90,7 +90,7 @@ section .btn {
   margin-right: 50%;
 }
 section .btn:hover {
-  background-color: #102B3C;
+  background-color: #102b3c;
 }
 
 .headphones {
@@ -114,7 +114,7 @@ section .btn:hover {
 .headphones .shop-btn {
   margin-top: 20px;
   padding: 7px 15px;
-  background: #3182B5;
+  background: #3182b5;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -127,7 +127,7 @@ section .btn:hover {
   color: white;
 }
 .headphones .shop-btn:hover {
-  background-color: #102B3C;
+  background-color: #102b3c;
 }
 .headphones .img-headphones {
   width: 50%;
@@ -188,7 +188,8 @@ section .btn:hover {
   margin-bottom: 3%;
   gap: 1%;
 }
-.registrer input, .registrer textarea {
+.registrer input,
+.registrer textarea {
   padding: 2%;
   border: 0.1em solid #ccc;
   border-radius: 1%;
@@ -210,14 +211,14 @@ section .btn:hover {
 }
 .registrer .submit-btn {
   background-color: #256187;
-  color: #AED1E6;
+  color: #aed1e6;
   padding: 2%;
   border-radius: 2%;
   width: 30%;
   margin-left: 70%;
 }
 .registrer .submit-btn:hover {
-  background-color: #102B3C;
+  background-color: #102b3c;
 }
 .registrer form {
   margin-left: 17%;
@@ -249,10 +250,10 @@ section .btn:hover {
   width: 8%;
 }
 .info button .now:hover {
-  background-color: #102B3C;
+  background-color: #102b3c;
 }
 .info button a {
-  color: #AED1E6;
+  color: #aed1e6;
   text-decoration: none;
 }
 
@@ -267,4 +268,41 @@ footer {
 }
 footer p {
   font-size: 10px;
+}
+
+.burger-menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.ambits {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 5pc;
+  color: #256187;
+}
+
+.how-why {
+  display: flex;
+  text-align: center;
+  width: 45%;
+  gap: 8%;
+  margin-left: 29%;
+  margin-top: 5%;
+}
+.how-why h4 {
+  padding-top: 10%;
+}
+.how-why p {
+  padding-top: 5%;
+}
+
+.test {
+  display: flex;
+  text-align: center;
+  padding-top: 5%;
+  margin-left: 27%;
+  width: 50%;
+  gap: 5%;
 }/*# sourceMappingURL=main.css.map */
