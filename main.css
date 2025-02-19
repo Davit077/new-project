@@ -162,4 +162,109 @@ section .btn:hover {
   display: flex;
   gap: 7pc;
   color: white;
+}
+
+.registrer {
+  background: #fff;
+  padding: 5%;
+  border-radius: 2%;
+  box-shadow: 0 2% 4% rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 60%;
+  box-sizing: border-box;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+.registrer .contact {
+  text-align: center;
+  font-size: 5pc;
+  letter-spacing: 2%;
+  color: #215779;
+  margin-bottom: 5%;
+  text-transform: uppercase;
+}
+.registrer .form-group {
+  display: flex;
+  margin-bottom: 3%;
+  gap: 1%;
+}
+.registrer input, .registrer textarea {
+  padding: 2%;
+  border: 0.1em solid #ccc;
+  border-radius: 1%;
+  font-size: 100%;
+  width: 100%;
+  margin-top: 1%;
+  box-sizing: border-box;
+}
+.registrer .name-group {
+  display: flex;
+  gap: 4%;
+}
+.registrer .name-group div {
+  flex: 1;
+}
+.registrer .name {
+  display: flex;
+  gap: 40%;
+}
+.registrer .submit-btn {
+  background-color: #256187;
+  color: #AED1E6;
+  padding: 2%;
+  border-radius: 2%;
+  width: 30%;
+  margin-left: 70%;
+}
+.registrer .submit-btn:hover {
+  background-color: #102B3C;
+}
+.registrer form {
+  margin-left: 17%;
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1pc;
+}
+.info img {
+  width: 3%;
+}
+.info .read {
+  text-decoration: none;
+  color: #215779;
+}
+.info .para {
+  font-size: 9px;
+}
+.info button {
+  background-color: #256187;
+  padding: 0.5%;
+  width: 8%;
+}
+.info button .now:hover {
+  background-color: #102B3C;
+}
+.info button a {
+  color: #AED1E6;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 1%;
+  background-color: black;
+  color: white;
+  margin-top: 2%;
+  padding-top: 1%;
+}
+footer p {
+  font-size: 10px;
 }/*# sourceMappingURL=main.css.map */
