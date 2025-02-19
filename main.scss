@@ -127,3 +127,28 @@ section{
         margin-top: 10%;
     }
 }
+.video-headphones{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5pc;
+        padding-bottom: 5%;
+    h1{
+        font-size: 5pc;
+        margin-top: 5%;
+        font-weight: 700;
+        color: white;
+    }
+    background-image: image-set("https://static.wixstatic.com/media/84770f_55393df7d6134c138d56112b4edc0c80~mv2.png/v1/crop/x_99,y_0,w_320,h_309,q_85,enc_auto/84770f_55393df7d6134c138d56112b4edc0c80~mv2.png");
+    .item1{
+        display: flex;
+            color: white;
+            gap: 7pc;
+            margin-top: -2%;
+    }
+    .item2{
+        display: flex;
+            gap: 7pc;
+            color: white;
+    }
+} 
