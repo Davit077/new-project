@@ -64,10 +64,6 @@ section {
 }
 section .hero {
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 10%;
 }
 section .cont {
   color: white;
@@ -305,4 +301,105 @@ footer p {
   margin-left: 27%;
   width: 50%;
   gap: 5%;
+}
+
+.but0 {
+  background-color: #256187;
+  color: #3182b5;
+  padding: 0.5%;
+  margin-left: 47%;
+  margin-top: 4%;
+  width: 10%;
+}
+.but0 .but0:hover {
+  background-color: #102b3c;
+}
+
+@media screen and (max-width: 430px) {
+  .navbar {
+    width: 100%;
+  }
+  .hero {
+    position: relative;
+    left: 0;
+    margin-top: -12%;
+    width: 100%;
+  }
+  .cont {
+    position: absolute;
+    top: 30%;
+  }
+  .video-headphones {
+    margin-top: -99%;
+  }
+  .video-headphones h1 {
+    font-size: 3pc;
+  }
+  .video-headphones .item1 {
+    flex-direction: column;
+    gap: 2pc;
+    color: #666;
+    font-size: 20px;
+  }
+  .video-headphones .item2 {
+    flex-direction: column;
+    gap: 2pc;
+    color: #666;
+    font-size: 20px;
+    margin-top: -10%;
+  }
+  .video-headphones video {
+    width: 90%;
+    height: 5%;
+  }
+  .registrer .contact {
+    font-size: 3pc;
+  }
+  .registrer .form-group {
+    flex-direction: column;
+  }
+  .registrer #last-name {
+    display: none;
+  }
+  .registrer .prov {
+    display: none;
+  }
+  .registrer form {
+    display: inline;
+  }
+  .registrer .submit-btn {
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 3%;
+  }
+  .info {
+    width: 60%;
+    text-align: center;
+    margin-left: 20%;
+  }
+  .info button {
+    width: 50%;
+  }
+  .info img {
+    width: 15%;
+    margin-top: 5%;
+  }
+  .how-why {
+    flex-direction: column;
+    gap: 5pc;
+    padding-top: 5%;
+  }
+  .test {
+    flex-direction: column;
+    padding-top: 5pc;
+    gap: 3pc;
+  }
+  .but0 {
+    width: 45%;
+    margin-left: 30%;
+    margin-top: 10%;
+  }
+  footer {
+    margin-top: 5%;
+  }
 }/*# sourceMappingURL=main.css.map */
