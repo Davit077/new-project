@@ -91,17 +91,20 @@ section .btn:hover {
 
 .headphones {
   width: 90%;
+}
+.headphones p {
+  width: 41%;
+  margin-left: 29%;
+}
+.headphones .head {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 10%;
-}
-.headphones .text-headphones {
-  width: 45%;
 }
 .headphones .text-headphones h1 {
   font-weight: 200;
   text-align: center;
+  margin-top: 5%;
+  font-size: 20px;
 }
 .headphones .text-headphones p {
   text-align: center;
@@ -125,11 +128,8 @@ section .btn:hover {
 .headphones .shop-btn:hover {
   background-color: #102b3c;
 }
-.headphones .img-headphones {
-  width: 50%;
-}
 .headphones .img-headphones img {
-  width: 50%;
+  width: 100%;
   margin-top: 10%;
 }
 
@@ -305,7 +305,7 @@ footer p {
 
 .but0 {
   background-color: #256187;
-  color: #3182b5;
+  color: #4aa8e3;
   padding: 0.5%;
   margin-left: 47%;
   margin-top: 4%;
@@ -313,6 +313,41 @@ footer p {
 }
 .but0 .but0:hover {
   background-color: #102b3c;
+}
+
+#demo-mode .close-x {
+  font-size: 3pc;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+#demo-mode .close-x a {
+  text-decoration: none;
+  color: black;
+}
+#demo-mode .cen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2pc;
+  margin-top: 10%;
+}
+#demo-mode .dm {
+  font-size: 3pc;
+}
+#demo-mode .make {
+  font-size: 14px;
+  font-weight: 700;
+}
+#demo-mode button {
+  width: 10%;
+  height: 3pc;
+  background-color: #4aa8e3;
+}
+#demo-mode button a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 430px) {
@@ -329,8 +364,11 @@ footer p {
     position: absolute;
     top: 30%;
   }
-  .video-headphones {
-    margin-top: -99%;
+  .head {
+    flex-direction: column;
+  }
+  .img-headphones {
+    margin-left: 5%;
   }
   .video-headphones h1 {
     font-size: 3pc;
@@ -398,6 +436,29 @@ footer p {
     width: 45%;
     margin-left: 30%;
     margin-top: 10%;
+    height: 3pc;
+  }
+  .text-headphones p {
+    width: 71%;
+    margin-left: 15%;
+  }
+  .text-headphones .shop-btn {
+    margin-left: 35%;
+    margin-top: 10%;
+  }
+  #demo-mode {
+    margin-top: -20%;
+  }
+  #demo-mode button {
+    width: 90%;
+  }
+  #demo-mode .close-x {
+    font-size: 1pc;
+    margin-left: 80%;
+    margin-top: 10%;
+  }
+  #demo-mode .close-x a {
+    width: 90%;
   }
   footer {
     margin-top: 5%;

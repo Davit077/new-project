@@ -1,8 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const burger = document.querySelector(".burger");
-    const navLinks = document.querySelector(".nav-links");
-
-    burger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
+document.getElementById("close-button").addEventListener("click", function() {
+    document.getElementById("demo-mode").style.display = "none";
+    window.location.href = "indexhtml";
 });
