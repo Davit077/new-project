@@ -350,6 +350,33 @@ footer p {
   font-size: 20px;
 }
 
+#product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  padding: 10px;
+  width: 20%;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+
+.our {
+  margin-top: 1%;
+  text-align: center;
+  padding: 5%;
+  font-size: 5pc;
+  font-weight: 100;
+  color: #256187;
+}
+
 @media screen and (max-width: 430px) {
   .navbar {
     width: 100%;
@@ -459,6 +486,10 @@ footer p {
   }
   #demo-mode .close-x a {
     width: 90%;
+  }
+  #product-list {
+    flex-direction: column;
+    align-items: center;
   }
   footer {
     margin-top: 5%;
