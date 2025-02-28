@@ -25,6 +25,14 @@ body {
   color: #3182b5;
   text-decoration: none;
 }
+.navbar .burger-menu {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
 .navbar ul {
   list-style: none;
@@ -380,6 +388,16 @@ footer p {
 @media screen and (max-width: 430px) {
   .navbar {
     width: 100%;
+    gap: 10pc;
+  }
+  .navbar ul {
+    display: none;
+  }
+  #burger-menu {
+    display: block;
+    background-color: white;
+    color: black;
+    width: 10%;
   }
   .hero {
     position: relative;
