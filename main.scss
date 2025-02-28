@@ -367,6 +367,46 @@ footer {
   font-weight: 100;
   color: #256187;
 }
+@media screen and (max-width: 770px){
+  section{
+    margin-top: -4%;
+  }
+  .text-headphones{
+      font-size: 11px;
+      .shop-btn{
+        margin-left: 35%;
+      }
+    }
+    .video-headphones{
+      .item1{
+        width: 92%;
+      }
+      .item2{
+        width: 92%;
+      }
+    }
+    .info button{
+      width: 20%;
+    }
+    .info img{
+      width: 7%;
+    }
+    .how-why{
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 10%;
+    }
+    .test{
+      width: 90%;
+      MARGIN-LEFT: 5%;
+      margin-top: 8%;
+    }
+    .but0{
+      width: 20%;
+      margin-left: 40%;
+      margin-top: 10%;
+    }
+}
 @media screen and (max-width: 430px) {
   .navbar {
     width: 100%;
