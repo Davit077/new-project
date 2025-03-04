@@ -36,11 +36,4 @@
  .then(response => response.json())
  .then(product => {   })
  .catch(error => console.error("error fetching data:", error));
-
- document.addEventListener("DOMContentLoaded", function () {
-   const burger = document.getElementById("burger-menu");
-   const nav = document.getElementById("nav-links");
-   burger.onclick = function () {
-       nav.classList.toggle("active");
-   };
-});
+ 

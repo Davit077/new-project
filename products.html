@@ -15,14 +15,19 @@
   </head>
   <body>
     <nav class="navbar">
-      <h1><a href="./index.html" class="logo">AmBits</a></h1>
-      <button class="burger-menu" id="burger-menu">☰</button>
-      <ul class="nav-links" id="nav-links">
+      <h1><a href="./index.html" class="logo">AmBit</a></h1>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="burger-menu">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul class="nav-links">
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./products.html">Products</a></li>
-        <i class="fa-solid fa-user"></i>
-        <li><a href="./log-in.html">Login</a></li>
+        <div class="log">
+          <i class="fa-solid fa-user"></i>
+          <li><a href="./log-in.html">Login</a></li>
+         </div>
       </ul>
     </nav>
     <h1 class="our">

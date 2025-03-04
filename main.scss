@@ -13,6 +13,41 @@ body {
   left: 0;
   width: 100%;
   background-color: black;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.log{
+  display: flex;
+}
+.navbar h1 a {
+  color: #3182b5;
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li {
+  display: inline;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+#menu-toggle {
+  display: none;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
   padding: 3% 0;
   text-align: center;
   z-index: 1000;
@@ -22,14 +57,7 @@ body {
     color: #3182b5;
     text-decoration: none;
   }
-  .burger-menu{
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
+
 }
 .navbar ul {
   list-style: none;
@@ -61,6 +89,7 @@ section {
   justify-content: center;
   background-color: black;
   height: 30pc;
+  gap: 10%;
   .hero {
     height: 100%;
 
@@ -264,11 +293,7 @@ footer {
     font-size: 10px;
   }
 }
-.burger-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
+
 .ambits {
   text-align: center;
   margin-top: 5%;
@@ -296,7 +321,7 @@ footer {
   margin-left: 27%;
   width: 50%;
   gap: 5%;
-} 
+}
 .but0{
   background-color: #256187;
   color: #4aa8e3;
@@ -371,6 +396,9 @@ footer {
   section{
     margin-top: -4%;
   }
+  .cont{
+    margin-left: -7%;
+  }
   .text-headphones{
       font-size: 11px;
       .shop-btn{
@@ -406,8 +434,42 @@ footer {
       margin-left: 40%;
       margin-top: 10%;
     }
+    #demo-mode button{
+      width: 40%;
+    }
 }
 @media screen and (max-width: 430px) {
+  .product{
+    width: 100%;
+  }
+  .burger-menu {
+    display: block;
+    color: black;
+    background-color: white;
+    height: 2.5pc;
+    width: 2.5pc;
+    i{
+      font-size: 2pc;
+    margin-top: 10%;
+    }
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  .nav-links li {
+    padding: 10px 0;
+  }
   .navbar {
     width: 100%;
     gap: 10pc;
@@ -442,12 +504,14 @@ footer {
       font-size: 3pc;
     }
     .item1 {
+      align-items: center;
       flex-direction: column;
       gap: 2pc;
       color: #666;
       font-size: 20px;
     }
     .item2 {
+      align-items: center;
       flex-direction: column;
       gap: 2pc;
       color: #666;
@@ -518,6 +582,10 @@ footer {
     margin-left: 35%;
     margin-top: 10%;
   }
+}
+.log{
+  justify-content: center;
+  align-items: center;
 }
 #demo-mode{
   margin-top: -20%;

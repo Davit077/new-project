@@ -15,6 +15,48 @@ body {
   left: 0;
   width: 100%;
   background-color: black;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.log {
+  display: flex;
+}
+
+.navbar h1 a {
+  color: #3182b5;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
   padding: 3% 0;
   text-align: center;
   z-index: 1000;
@@ -24,14 +66,6 @@ body {
 .navbar h1 a {
   color: #3182b5;
   text-decoration: none;
-}
-.navbar .burger-menu {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
 }
 
 .navbar ul {
@@ -69,6 +103,7 @@ section {
   justify-content: center;
   background-color: black;
   height: 30pc;
+  gap: 10%;
 }
 section .hero {
   height: 100%;
@@ -274,12 +309,6 @@ footer p {
   font-size: 10px;
 }
 
-.burger-menu {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-}
-
 .ambits {
   text-align: center;
   margin-top: 5%;
@@ -389,6 +418,9 @@ footer p {
   section {
     margin-top: -4%;
   }
+  .cont {
+    margin-left: -7%;
+  }
   .text-headphones {
     font-size: 11px;
   }
@@ -422,8 +454,42 @@ footer p {
     margin-left: 40%;
     margin-top: 10%;
   }
+  #demo-mode button {
+    width: 40%;
+  }
 }
 @media screen and (max-width: 430px) {
+  .product {
+    width: 100%;
+  }
+  .burger-menu {
+    display: block;
+    color: black;
+    background-color: white;
+    height: 2.5pc;
+    width: 2.5pc;
+  }
+  .burger-menu i {
+    font-size: 2pc;
+    margin-top: 10%;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  #menu-toggle:checked ~ .nav-links {
+    display: flex;
+  }
+  .nav-links li {
+    padding: 10px 0;
+  }
   .navbar {
     width: 100%;
     gap: 10pc;
@@ -457,12 +523,14 @@ footer p {
     font-size: 3pc;
   }
   .video-headphones .item1 {
+    align-items: center;
     flex-direction: column;
     gap: 2pc;
     color: #666;
     font-size: 20px;
   }
   .video-headphones .item2 {
+    align-items: center;
     flex-direction: column;
     gap: 2pc;
     color: #666;
@@ -528,6 +596,10 @@ footer p {
   .text-headphones .shop-btn {
     margin-left: 35%;
     margin-top: 10%;
+  }
+  .log {
+    justify-content: center;
+    align-items: center;
   }
   #demo-mode {
     margin-top: -20%;
