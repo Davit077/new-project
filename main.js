@@ -37,3 +37,46 @@
  .then(product => {   })
  .catch(error => console.error("error fetching data:", error));
  
+ document.addEventListener("DOMContentLoaded", function () {
+   const shopItems = document.getElementById("shop-items");
+   if (!shopItems) {
+       console.error("Error: Element with ID 'shop-items' not found.");
+       return;
+   }
+   const products = [
+       { name: "i'm product", price: 19.99, image: "https://static.wixstatic.com/media/9c608a_8c2439ea7a264abd853460a43578bacb.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_8c2439ea7a264abd853460a43578bacb.jpg" },
+       { name: "i'm product", price: 89.99, image: "https://static.wixstatic.com/media/9c608a_36e11adb6d8841098c281113e76f48c3.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_36e11adb6d8841098c281113e76f48c3.jpg" },
+       { name: "i'm product", price: 39.99, image: "https://static.wixstatic.com/media/9c608a_562215ea6c354b07bcd40b079df48c46.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_562215ea6c354b07bcd40b079df48c46.jpg" },
+       { name: "i'm product", price: 25.99, image: "https://static.wixstatic.com/media/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg" },
+       { name: "i'm product", price: 59.99, image: "https://static.wixstatic.com/media/9c608a_8c2439ea7a264abd853460a43578bacb.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_8c2439ea7a264abd853460a43578bacb.jpg" },
+       { name: "i'm product", price: 34.99, image: "https://static.wixstatic.com/media/9c608a_36e11adb6d8841098c281113e76f48c3.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_36e11adb6d8841098c281113e76f48c3.jpg" },
+       { name: "i'm product", price: 22.99, image: "https://static.wixstatic.com/media/9c608a_562215ea6c354b07bcd40b079df48c46.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_562215ea6c354b07bcd40b079df48c46.jpg" },
+       { name: "i'm product", price: 74.99, image: "https://static.wixstatic.com/media/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg" },
+       { name: "i'm product", price: 59.99, image: "https://static.wixstatic.com/media/9c608a_8c2439ea7a264abd853460a43578bacb.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_8c2439ea7a264abd853460a43578bacb.jpg" },
+       { name: "i'm product", price: 199.99, image: "https://static.wixstatic.com/media/9c608a_36e11adb6d8841098c281113e76f48c3.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_36e11adb6d8841098c281113e76f48c3.jpg" },
+       { name: "i'm product", price: 19.99, image: "https://static.wixstatic.com/media/9c608a_562215ea6c354b07bcd40b079df48c46.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_562215ea6c354b07bcd40b079df48c46.jpg" },
+       { name: "i'm product", price: 89.99, image: "https://static.wixstatic.com/media/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg" },
+       { name: "i'm product", price: 39.99, image: "https://static.wixstatic.com/media/9c608a_8c2439ea7a264abd853460a43578bacb.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_8c2439ea7a264abd853460a43578bacb.jpg" },
+       { name: "i'm product", price: 25.99, image: "https://static.wixstatic.com/media/9c608a_36e11adb6d8841098c281113e76f48c3.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_36e11adb6d8841098c281113e76f48c3.jpg" },
+       { name: "i'm product", price: 59.99, image: "https://static.wixstatic.com/media/9c608a_562215ea6c354b07bcd40b079df48c46.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_562215ea6c354b07bcd40b079df48c46.jpg" },
+       { name: "i'm product", price: 34.99, image: "https://static.wixstatic.com/media/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg" },
+       { name: "i'm product", price: 22.99, image: "https://static.wixstatic.com/media/9c608a_8c2439ea7a264abd853460a43578bacb.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_8c2439ea7a264abd853460a43578bacb.jpg" },
+       { name: "i'm product", price: 74.99, image: "https://static.wixstatic.com/media/9c608a_36e11adb6d8841098c281113e76f48c3.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_36e11adb6d8841098c281113e76f48c3.jpg" },
+       { name: "i'm product", price: 59.99, image: "https://static.wixstatic.com/media/9c608a_562215ea6c354b07bcd40b079df48c46.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_562215ea6c354b07bcd40b079df48c46.jpg" },
+       { name: "i'm product", price: 199.99, image: "https://static.wixstatic.com/media/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_02ab3c69f2bb4397b73f28f0d5d0d466.jpg"}
+   ];
+   products.forEach(product => {
+       const productDiv = document.createElement("div");
+       productDiv.classList.add("product");
+       productDiv.innerHTML = `
+<img src="${product.image}" alt="${product.name}">
+<div class="quick-view">Quick View</div>
+<div class="details">
+<h3>${product.name}</h3>
+<p>Price: $${product.price}</p>
+</div>
+       `;
+       shopItems.appendChild(productDiv);
+   });
+});
+
