@@ -509,7 +509,6 @@ footer {
 }
 
 .toy-card, .card-hover {
-  position: relative;
   border: 1px solid #ddd;
   padding: 15px;
   background-color: #fff;
@@ -521,8 +520,32 @@ footer {
 }
 
 .toy-card:hover, .card-hover:hover {
-  transform: scale(1);
+  transform: scale(1.1);
   z-index: 10;
+}
+
+#product-list {
+  transition: 0.5s;
+  position: absolute;
+  z-index: 999;
+  width: 95%;
+  margin-top: 0%;
+  margin-left: 2%;
+  font-size: 22px;
+}
+
+img {
+  z-index: 0;
+}
+
+#hov {
+  transition: 0.5s;
+  margin-left: 2%;
+}
+
+#product-list:hover {
+  opacity: 0;
+  transition: 0.5s;
 }
 
 #product-list .toy-card {

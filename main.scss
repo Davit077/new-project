@@ -465,8 +465,7 @@ footer{
   align-items: center;
 }
 .toy-card, .card-hover {
-  position: relative;
-  border: 1px solid #ddd;
+   border: 1px solid #ddd;
   padding: 15px;
   background-color: #fff;
   border-radius: 8px;
@@ -476,8 +475,28 @@ footer{
   transition: transform 0.3s ease, z-index 0.3s;
 }
 .toy-card:hover, .card-hover:hover {
-  transform: scale(1.0);
+  transform: scale(1.1);
   z-index: 10;
+}
+#product-list{
+  transition: 0.5s;
+  position: absolute;
+  z-index: 999;
+  width: 95%;
+  margin-top: 0%;
+  margin-left: 2%;
+  font-size: 22px;
+}
+img{ 
+  z-index: 0;
+}
+#hov{
+  transition: 0.5s;
+  margin-left: 2%;
+}
+#product-list:hover{
+  opacity: 0;
+  transition: 0.5s;
 }
 #product-list .toy-card {
   padding: 15px;
@@ -503,8 +522,7 @@ footer{
 #hov .card-hover:hover {
   background-color: #e0e0e0;
   border-color: #007bff;
-}
-
+ }
 @media screen and (max-width: 770px){
   iframe{
     width: 90%;
