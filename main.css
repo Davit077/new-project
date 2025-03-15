@@ -418,71 +418,6 @@ footer p {
   gap: 5%;
 }
 
-#hov {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  width: 95%;
-  gap: 5%;
-}
-
-.card-hover {
-  background: #fff;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-  margin-left: 3%;
-  margin-top: 5%;
-}
-
-.card-hover:hover {
-  transform: translateY(-5px);
-}
-
-.toy-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
-  margin-left: 3%;
-  margin-top: 5%;
-}
-
-.toy-card:hover {
-  transform: translateY(-5px);
-}
-
-.toy-card img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-#hov img {
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.toy-card h3 {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-#hov {
-  font-size: 18px;
-  margin: 10px 0;
-}
-
-#hov p {
-  color: #555;
-  font-size: 14px;
-}
-
-.toy-card p {
-  color: #555;
-  font-size: 14px;
-}
-
 .price {
   font-weight: bold;
   color: #333;
@@ -508,7 +443,7 @@ footer {
   align-items: center;
 }
 
-.toy-card, .card-hover {
+toy-card {
   border: 1px solid #ddd;
   padding: 15px;
   background-color: #fff;
@@ -519,61 +454,56 @@ footer {
   transition: transform 0.3s ease, z-index 0.3s;
 }
 
-.toy-card:hover, .card-hover:hover {
-  transform: scale(1.1);
-  z-index: 10;
-}
-
 #product-list {
-  transition: 0.5s;
-  position: absolute;
-  z-index: 999;
-  width: 95%;
-  margin-top: 0%;
-  margin-left: 2%;
-  font-size: 22px;
+  display: grid;
+  gap: 20px;
+  margin-left: 3%;
 }
 
-img {
-  z-index: 0;
-}
-
-#hov {
-  transition: 0.5s;
-  margin-left: 2%;
-}
-
-#product-list:hover {
-  opacity: 0;
-  transition: 0.5s;
-}
-
-#product-list .toy-card {
-  padding: 15px;
-  margin: 10px;
+.toy-card {
+  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
 }
 
-#product-list .toy-card:hover {
-  transform: translateY(-5px);
+.toy-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#hov .card-hover {
-  padding: 15px;
-  margin: 10px;
-  border: 1px solid #ddd;
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  background-color: #f9f9f9;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  z-index: 1000;
 }
 
-#hov .card-hover:hover {
-  background-color: #e0e0e0;
-  border-color: #007bff;
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
 @media screen and (max-width: 770px) {
@@ -611,13 +541,17 @@ img {
   }
   .test {
     width: 90%;
-    MARGIN-LEFT: 5%;
+    margin-left: 5%;
     margin-top: 8%;
   }
   .but0 {
     width: 20%;
     margin-left: 40%;
     margin-top: 10%;
+  }
+  #product-list {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 15%;
   }
   #demo-mode button {
     width: 40%;
@@ -782,6 +716,10 @@ img {
   }
   #demo-mode .close-x a {
     width: 90%;
+  }
+  #product-list {
+    grid-template-columns: 1fr;
+    padding-left: 22%;
   }
   footer {
     margin-top: 5%;
