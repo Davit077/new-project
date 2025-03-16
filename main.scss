@@ -443,6 +443,12 @@ toy-card {
 .toy-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+#popup-img {
+  padding-right: 50%;
+}
+.pop {
+  display: flex;
+}
 .popup {
   display: none;
   position: fixed;
@@ -471,9 +477,135 @@ toy-card {
   top: 10px;
   right: 10px;
 }
+.quantity-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid grey;
+  width: 100px;
+  padding: 5px;
+  justify-content: space-between;
+}
+.quantity-input {
+  width: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+.quantity-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.quantity-buttons button {
+  background: #fff;
+  border: 1px solid #999999;
+  cursor: pointer;
+}
+.quantity-buttons button:hover {
+  background: #919191;
+  color: white;
+}
+.list-pop {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  margin-top: 5%;
+  position: relative;
+  left: -25%;
+  #popup-name {
+    font-size: 2pc;
+    font-weight: 100;
+  }
+  #popup-price {
+    font-size: 18px;
+  }
+  #addToCart {
+    width: 12pc;
+    height: 15%;
+    color: white;
+    background-color: #3182b5;
+  }
+}
+.conte{
+  width: 80%;
+  margin: 20px auto;
+  .product {
+   display: flex;
+   gap: 20px;
+}
+.product-image img {
+   width: 300px;
+   border-radius: 10px;
+}
+.product-details {
+   max-width: 100%;
+   display: flex
+   ;
+       flex-direction: column;
+       gap: 1pc;
+}
+h1 {
+   font-size: 24px;
+}
+.sku {
+   color: gray;
+   font-size: 14px;
+}
+.price {
+   font-size: 20px;
+   margin: 10px 0;
+}
+.old-price {
+   text-decoration: line-through;
+   color: black;
+}
+.new-price {
+   color: black;
+   font-weight: bold;
+}
+input {
+   width: 50px;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+button {
+   display: block;
+   width: 100%;
+   padding: 10px;
+   margin: 5px 0;
+   border: none;
+   cursor: pointer;
+   color: white;
+    background-color: #256187;
+}
+button:hover {
+   background-color: #4aa8e3;
+}
+.buy-now {
+   background-color: black;
+   color: white;
+}
+.prod{
+  display: flex;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+}
+}
 @media screen and (max-width: 770px) {
   iframe {
     width: 90%;
+  }
+  .bag{
+    display: none;
+  }
+  .list-pop {
+    margin-left: -30%;
+    left: 0%;
+    bottom: 2pc;
+  }
+  .prod{
+    flex-direction: column;
   }
   section {
     margin-top: -4%;
@@ -542,6 +674,9 @@ toy-card {
       margin-top: 10%;
     }
   }
+  .bag{
+    display: none;
+  }
   .nav-links {
     display: none;
     flex-direction: column;
@@ -571,6 +706,9 @@ toy-card {
     background-color: white;
     color: black;
     width: 10%;
+  }
+  .prod-image img{
+    width: 90%;
   }
   .hero {
     position: relative;

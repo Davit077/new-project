@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1><a href="./index.html" class="logo">AmBit</a></h1>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="burger-menu">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul class="nav-links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./products.html">Products</a></li>
+        <div class="log">
+          <i class="fa-solid fa-user"></i>
+          <li><a href="./log-in.html">Login</a></li>
+        </div>
+        <i class="fa fa-shopping-bag"></i>
+      </ul>
+    </nav>
+
+    <div class="conte">
+        <div class="prod">
+        <div class="prod-image">
+        <img src="https://static.wixstatic.com/media/9c608a_8ac1adb0a50749a5aa72cd0181945cd0.jpg/v1/fill/w_667,h_667,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/9c608a_8ac1adb0a50749a5aa72cd0181945cd0.jpg" alt="Headphones">
+        </div>
+        <div class="product-details">
+        <h1>I'm a Product</h1>
+        <p class="sku">SKU: 0002</p>
+        <p class="price"><span class="old-price">$19.99</span> <span class="new-price">$14.99</span></p>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1">
+        <button onclick="addToCart()">Add to Cart</button>
+        <button class="buy-now" onclick="buyNow()">Buy Now</button>
+        <h3>Shipping</h3>
+        <p>We offer fast and reliable shipping for all our products.</p>
+        <h3>Returns</h3>
+        <p>If you're not satisfied, you can return the product within 30 days.</p>
+        </div>
+        </div>
+        </div>
+        <footer>
+            <div class="ambitss">
+              <p>© 2035 by AmBits. Powered and secured by Wix</p>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-x-twitter"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+          </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>

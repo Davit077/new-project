@@ -40,11 +40,23 @@
 <div class="overlay" id="overlay"></div>
 <div class="popup" id="popup">
 <span class="close-btn" id="closeBtn">&times;</span>
-<img id="popup-img" src="" alt="Product Image" style="width:100%;">
-<h2 id="popup-name"></h2>
-<p id="popup-price"></p>
-<p id="popup-description"></p>
-<button id="addToCart">Add to Cart</button>
+<div class="pop">
+  <div class="pop-img">
+    <img id="popup-img" src="" alt="Product Image" style="width:110%;">
+  </div>
+  <div class="list-pop">
+    <h2 id="popup-name"></h2>
+  <p id="popup-price"></p>
+ <div class="quantity-container">
+<input type="number" class="quantity-input" id="quantity" value="1" min="1">
+<div class="quantity-buttons">
+<button onclick="increaseQuantity()">▲</button>
+<button onclick="decreaseQuantity()">▼</button>
+</div>
+</div>
+  <button id="addToCart">Add to Cart</button>
+  </div>
+</div>
 </div>
     <footer>
       <div class="ambitss">
