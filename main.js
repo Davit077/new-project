@@ -39,35 +39,72 @@ fetch("https://67c03334b9d02a9f2248b967.mockapi.io/mock-api/card")
       overlay.style.display = "none";
      });
     addToCartBtn.addEventListener("click", () => {
-      // alert(`Added ${selectedProduct.name} to cart`);
-      // popup.style.display = "none";
-      // overlay.style.display = "none";
-    });
+    }); 
+    addToCartBtn.addEventListener("click", () => {
+      if (!selectedProduct) return;
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let existingItem = cart.find(item => item.id === selectedProduct.id);
+
+      if (existingItem) {
+          existingItem.quantity += quantity;
+      } else {
+          cart.push({ ...selectedProduct, quantity });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCartUI();
+      document.getElementById("cart-sidebar").classList.add("open"); // kalatis gaxsna
+      popup.style.display = "none"; // Popup'u gauqmeba
+  });
+
+  updateCartUI();
   })
   .catch((error) => {
     console.error("Error fetching data:", error);
-  });
+  }); 
+document.querySelector(".fa-bag-shopping").addEventListener("click", () => {
+  document.getElementById("cart-sidebar").classList.add("open");
+});
 
-  function increaseQuantity() {
-    let input = document.getElementById("quantity");
-    input.value = parseInt(input.value) + 1;
+document.getElementById("close-cart").addEventListener("click", () => {
+  document.getElementById("cart-sidebar").classList.remove("open");
+});
+
+function updateCartUI() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartItems = document.getElementById("cart-items");
+  const cartCount = document.getElementById("cart-count");
+ 
+ 
+  cartItems.innerHTML = "";
+
+  if (cart.length === 0) {
+      // kalata tu carielia es vanaxot
+      cartItems.innerHTML = "<li> your cart is empty</li>";
+      cartCount.textContent = "0";
+  } else {
+     
+      cart.forEach(item => {
+          const li = document.createElement("li");
+          li.innerHTML = `
+              <img src="${item.img}" width="50">
+              <span>${item.name}</span>
+              <strong>${item.price} </strong>
+              <button class="delete-btn" onclick="removeFromCart(${item.id})">
+                  <i class="fa-solid fa-trash"></i>
+              </button>
+          `;
+          cartItems.appendChild(li);
+      });
+      cartCount.textContent = cart.length;
+  }
 }
-function decreaseQuantity() {
-    let input = document.getElementById("quantity");
-    if (input.value > 1) {
-        input.value = parseInt(input.value) - 1;
-    }
+function removeFromCart(id) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart = cart.filter(item => item.id != id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  updateCartUI();
 }
 
-function addToCart() {
-  let quantity = document.getElementById("quantity").value;
-  alert("Added " + quantity + " item(s) to your cart!");
-}
-function buyNow() {
-  alert("Proceeding to checkout...");
-}
-let basketCount = 0;
-function addToBasket() {
-    basketCount++;
-    document.getElementById('basket-count').textContent = basketCount;
-}
+updateCartUI();
