@@ -39,9 +39,9 @@ fetch("https://67c03334b9d02a9f2248b967.mockapi.io/mock-api/card")
       overlay.style.display = "none";
      });
     addToCartBtn.addEventListener("click", () => {
-      alert(`Added ${selectedProduct.name} to cart`);
-      popup.style.display = "none";
-      overlay.style.display = "none";
+      // alert(`Added ${selectedProduct.name} to cart`);
+      // popup.style.display = "none";
+      // overlay.style.display = "none";
     });
   })
   .catch((error) => {
@@ -65,4 +65,9 @@ function addToCart() {
 }
 function buyNow() {
   alert("Proceeding to checkout...");
+}
+let basketCount = 0;
+function addToBasket() {
+    basketCount++;
+    document.getElementById('basket-count').textContent = basketCount;
 }

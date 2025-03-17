@@ -27,8 +27,11 @@
         <div class="log">
           <i class="fa-solid fa-user"></i>
           <li><a href="./log-in.html">Login</a></li>
-         </div>
-         <i class="fa fa-shopping-bag"></i>
+        </div>
+        <div class="bask">
+          <p class="bag"><i class="fa fa-shopping-bag"></i></p>
+          <div id="basket-count">0</div>
+        </div>
       </ul>
     </nav>
     <h1 class="our">
@@ -37,27 +40,30 @@
     </h1>
     <div class="toy-card" id="product-list"></div>
     <div id="product-list"></div>
-<div class="overlay" id="overlay"></div>
-<div class="popup" id="popup">
-<span class="close-btn" id="closeBtn">&times;</span>
-<div class="pop">
-  <div class="pop-img">
-    <img id="popup-img" src="" alt="Product Image" style="width:110%;">
-  </div>
-  <div class="list-pop">
-    <h2 id="popup-name"></h2>
-  <p id="popup-price"></p>
- <div class="quantity-container">
-<input type="number" class="quantity-input" id="quantity" value="1" min="1">
-<div class="quantity-buttons">
-<button onclick="increaseQuantity()">▲</button>
-<button onclick="decreaseQuantity()">▼</button>
-</div>
-</div>
-  <button id="addToCart">Add to Cart</button>
-  </div>
-</div>
-</div>
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <div class="pop">
+        <div class="pop-img">
+          <img id="popup-img" src="" alt="Product Image" style="width: 110%" />
+        </div>
+        <div class="list-pop">
+          <h2 id="popup-name"></h2>
+          <p id="popup-price"></p>
+          <div class="quantity-container">
+            <input
+              type="number"
+              class="quantity-input"
+              id="quantity"
+              value="1"
+              min="1"
+            />
+            <div class="quantity-buttons"></div>
+          </div>
+          <button id="addToCart" onclick="addToBasket()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="ambitss">
         <p>© 2035 by AmBits. Powered and secured by Wix</p>
