@@ -537,21 +537,14 @@ toy-card {
   margin-left: 3%;
 }
 .toy-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 200px;
+  background-color: #fff; 
   padding: 20px;
   text-align: center;
   cursor: pointer;
 }
 .toy-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-#popup-img {
-  padding-right: 50%;
-}
+} 
 .pop {
   display: flex;
 }
@@ -616,9 +609,7 @@ toy-card {
   flex-direction: column;
   gap: 10%;
   margin-top: 5%;
-  position: relative;
-  left: -25%;
-  #popup-name {
+  #popup-name { 
     font-size: 2pc;
     font-weight: 100;
   }
@@ -626,8 +617,7 @@ toy-card {
     font-size: 18px;
   }
   #addToCart {
-    width: 12pc;
-    height: 15%;
+    height: 7%;
     color: white;
     background-color: #3182b5;
   }
@@ -734,23 +724,21 @@ toy-card {
   font-size: 1.2em;
   margin-left: 5px;
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1100px) {
   iframe {
     width: 90%;
   }
   .bag {
     display: none;
   }
-  .list-pop {
-    margin-left: -30%;
-    left: 0%;
-    bottom: 2pc;
+  .our{
+    font-size: 5pc;
   }
   .prod {
     flex-direction: column;
   }
   section {
-    margin-top: -4%;
+    margin-top: -8%;
   }
   .cont {
     margin-left: -7%;
@@ -780,6 +768,10 @@ toy-card {
     margin-left: 5%;
     margin-top: 10%;
   }
+  .inp{
+    width: 180%;
+    margin-left: -40%;
+  }
   .test {
     width: 90%;
     margin-left: 5%;
@@ -791,14 +783,13 @@ toy-card {
     margin-top: 10%;
   }
   #product-list {
-    grid-template-columns: repeat(2, 1fr);
-    padding-left: 15%;
+    grid-template-columns: repeat(2, 1fr); 
   }
   #demo-mode button {
     width: 40%;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 750px) {
   iframe {
     width: 90%;
   }
@@ -814,6 +805,12 @@ toy-card {
     i {
       font-size: 2pc;
       margin-top: 10%;
+    }
+  }
+  #popup{
+    width: 80%;
+    .list-pop{
+      padding-left: 0%;
     }
   }
   .cart-icon {
@@ -851,6 +848,13 @@ toy-card {
   }
   .prod-image img {
     width: 90%;
+  }
+  .our{
+    font-size: 5pc;
+  }
+  .inp{
+    width: 150%;
+    margin-left: -20%;
   }
   .hero {
     position: relative;
@@ -971,8 +975,7 @@ toy-card {
     }
   }
   #product-list {
-    grid-template-columns: 1fr;
-    padding-left: 22%;
+    grid-template-columns: 1fr; 
   }
   footer {
     margin-top: 5%;
