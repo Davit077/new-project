@@ -729,6 +729,12 @@ toy-card {
   font-size: 1.2em;
   margin-left: 5px;
 }
+.cart-item-bottom {
+  margin-top: 30%;
+    margin-left: -50%;
+    border: 1px solid black;
+    width: 20%;
+}
 @media screen and (max-width: 2000px){
   .list-pop{
     margin-left: -15pc;
