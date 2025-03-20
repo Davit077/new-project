@@ -637,8 +637,10 @@ toy-card {
 .list-pop {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10%;
   margin-top: 5%;
+  margin-left: -40%;
 }
 .list-pop #popup-name {
   font-size: 2pc;
@@ -651,6 +653,10 @@ toy-card {
   height: 7%;
   color: white;
   background-color: #3182b5;
+}
+
+#popup-img {
+  width: 65%;
 }
 
 .bask {
@@ -763,6 +769,11 @@ toy-card {
   margin-left: 5px;
 }
 
+@media screen and (max-width: 2000px) {
+  .list-pop {
+    margin-left: -15pc;
+  }
+}
 @media screen and (max-width: 1100px) {
   iframe {
     width: 90%;
@@ -908,6 +919,9 @@ toy-card {
   }
   .img-headphones {
     margin-left: 5%;
+  }
+  #popup-img {
+    width: 50%;
   }
   .video-headphones h1 {
     font-size: 3pc;
