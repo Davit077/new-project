@@ -777,13 +777,13 @@ toy-card {
 }
 
 #total-price {
-  margin-top: 70%;
+  margin-top: 20%;
 }
 
 #checkout-btn {
   color: white;
   background-color: #256187;
-  height: 7pc;
+  height: 3pc;
   margin-top: 5%;
 }
 

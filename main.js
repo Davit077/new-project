@@ -147,7 +147,7 @@ function removeFromCart(id) {
   localStorage.setItem("cart", JSON.stringify(cart));
   updateCartUI();
 }
- 
+
 updateCartUI();
 
 document.getElementById("payment-form").addEventListener("submit", function (event) {
@@ -174,3 +174,52 @@ document.getElementById("payment-form").addEventListener("submit", function (eve
   }
   alert("Payment processing...");
 }); 
+
+//post method
+
+// document.getElementsByClassName('toy-card').addEventListener('click', () => {
+//   let cart = JSON.parse(localStorage.getItem("cart"));
+//   if (cart.length === 0) {
+//       alert("Your cart is empty.");
+//       return;
+//   }
+//   fetch("https://67c03334b9d02a9f22d8b967.mockapi.io/mock-apj/cart", {
+//       method: 'POST',
+//       headers: {
+//           'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify(cart),
+//   })
+//   .then(response => response.json())
+//   .then(data => {
+//       console.log('Cart successfully posted to MockAPI:', data);
+//       alert('Your cart has been successfully checked out!');
+//       localStorage.removeItem("cart");
+//       updateCartUI();
+//   })
+//   .catch(error => {
+//       console.error('Error posting cart data:', error);
+//       alert('There was an error checking out.');
+//   });
+// });
+
+//delete method
+
+// function deleteProductById(id) {
+//   fetch(`https://67c033334b9d02a9f2248b967.mockapi.io/mock-api/card/${id}`, {
+//       method: 'DELETE',
+//   })
+//   .then(response => {
+//       if (response.ok) {
+//           console.log(`Product with id ${id} has been deleted.`);
+//       } else {
+//           console.error(`Failed to delete product with id ${id}.`);
+//       }
+//   })
+//   .catch(error => {
+//       console.error(`Error deleting product with id ${id}.`, error);
+//   });
+// }
+
+// deleteProductById(5);
+// deleteProductById(6);
