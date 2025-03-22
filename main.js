@@ -149,3 +149,28 @@ function removeFromCart(id) {
 }
  
 updateCartUI();
+
+document.getElementById("payment-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const cardNumber = document.getElementById("card-number").value;
+  const expiryDate = document.getElementById("expiry-date").value;
+  const cvv = document.getElementById("cvv").value;
+  const cardHolder = document.getElementById("card-holder").value;
+  if (!cardNumber.match(/^\d{16}$/)) {
+      alert("Please enter a valid 16-digit card number.");
+      return;
+  }
+  if (!expiryDate.match(/^(0[1-9]|1[0-2])\/\d{2}$/)) {
+      alert("Please enter a valid expiration date in MM/YY format.");
+      return;
+  }
+  if (!cvv.match(/^\d{3,4}$/)) {
+      alert("Please enter a valid CVV (3 or 4 digits).");
+      return;
+  }
+  if (cardHolder.trim() === "") {
+      alert("Please enter the card holder's name.");
+      return;
+  }
+  alert("Payment processing...");
+}); 
