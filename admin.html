@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css" />
+    <title>acessories store</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -12,38 +18,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav class="navbar">
-      <h1><a href="./index.html" class="logo">AmBit</a></h1>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="burger-menu">
-        <i class="fas fa-bars"></i>
-      </label>
-      <ul class="nav-links">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./products.html">Products</a></li>
-        <div class="log">
-          <i class="fa-solid fa-user"></i>
-          <li><a href="./log-in.html">Login</a></li>
-        </div>
-        <ul>
-          <i class="fa-solid fa-bag-shopping" style="color: #3182b5"></i>
-          <div id="cart-sidebar" class="cart">
-            <div id="cart-sidebar-content">
-              <h4>Cart (<span id="cart-count">0</span> items)</h4>
-              <button id="close-cart">×</button>
-            </div>
-            <ul id="cart-items"></ul>
-            <h3 id="total-price">Total: $0.00</h3>
-            <a href="./card.html"
-              ><button id="checkout-btn">Checkout</button></a
-            >
-          </div>
-        </ul>
-      </ul>
-    </nav>
     <div id="admin-login" class="login-form">
       <div class="login-container">
         <h2>Admin Login</h2>
@@ -160,7 +140,7 @@
             const cvv = document.getElementById("cvv").value;
             const cardHolder = document.getElementById("card-holder").value;
 
-            
+            // Kart numarası doğrulama
             if (!cardNumber.replace(/\s/g, "").match(/^\d{16}$/)) {
               alert("Please enter a valid 16-digit card number.");
               return;
@@ -185,7 +165,7 @@
               cardHolder,
             };
 
-            fetch("https://67c03334b9d02a9f2248b967.mockapi.io/mock-api/card", {
+            fetch("https://67c9d1fb102d684575c3a377.mockapi.io/products", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -210,7 +190,7 @@
 
             if (productId) {
               fetch(
-                `https://67c03334b9d02a9f2248b967.mockapi.io/mock-api/card/${productId}`,
+                `https://67c9d1fb102d684575c3a377.mockapi.io/products/${productId}`,
                 {
                   method: "DELETE",
                 }
